@@ -18,7 +18,8 @@ const FeaturedProject = ({
   github,
 }) => {
   return (
-    <article className="w-full p-12  flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl">
+    <article className="w-full p-12  flex items-center justify-between rounded-3xl border border-solid border-dark bg-light dark:bg-dark shadow-2xl dark:border-light ">
+      {/* <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl" /> */}
       <Link
         href={link}
         target="_blank"
@@ -27,16 +28,20 @@ const FeaturedProject = ({
         <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
         <h5 className="capitalize font-normal text-dark/75 ">{projectType}</h5>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-3 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
@@ -56,7 +61,8 @@ const FeaturedProject = ({
 
 const Project = ({ title, projectType, type, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center  rounded-2xl border border-solid border-dark bg-light p-6 relative">
+    <article className="w-full flex flex-col items-center justify-center  rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl " />
       <Link
         href={link}
         target="_blank"
@@ -65,7 +71,9 @@ const Project = ({ title, projectType, type, img, link, github }) => {
         <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
@@ -79,7 +87,7 @@ const Project = ({ title, projectType, type, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className=" text-lg font-semibold underline"
+            className=" text-lg font-semibold underline  dark:text-light"
           >
             Visit
           </Link>
@@ -101,7 +109,7 @@ const projects = () => {
           content="This page about my awesome projects"
         />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="My Awesome Projects" className="mb-16" />
           <div className="grid grid-col-12 gap-24">

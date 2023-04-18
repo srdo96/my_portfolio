@@ -2,7 +2,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import logo from "../../public/assets/fast-time (2).png";
+import logo from "../../public/assets/fast-time.png";
 const articles = () => {
   return (
     <>

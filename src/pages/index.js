@@ -3,7 +3,10 @@ import HireMe from "@/components/HireMe";
 import { LinkArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
+// import sakibPic from "../../public/assets/sakib-pic.png";
+import sakibPic from "../../public/assets/sakib1.jpeg";
 
 export default function Home() {
   return (
@@ -15,7 +18,13 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout className="p-0">
           <div className="flex items-center justify-between w-full">
-            <div className="w-1/2"></div>
+            <div className="w-1/2 rounded-full">
+              <Image
+                className="rounded-full shadow-md"
+                src={sakibPic}
+                alt="picture of sakib"
+              />
+            </div>
             <div className="w-1/2 flex flex-col items-center">
               <AnimatedText
                 text="Write Code For Fun"

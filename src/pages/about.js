@@ -1,10 +1,11 @@
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
+import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
 import Image from "next/image";
 import pic from "../../public/assets/sakib-2.webp";
-import Experience from "@/components/Experience";
 
 const about = () => {
   return (
@@ -13,6 +14,7 @@ const about = () => {
         <title>Sakib Rahman | About</title>
         <meta name="description" content="This page about sakib rahman" />
       </Head>
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />

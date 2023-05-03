@@ -18,19 +18,19 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-        <Layout className="p-0">
-          <div className="flex items-center justify-between w-full">
-            <div className="w-1/2 rounded-full">
+        <Layout className="pt-0 md:pt-16 sm:pt-8">
+          <div className="flex items-center justify-between w-full lg:flex-col">
+            <div className="w-1/2 ">
               <Image
-                className="rounded-full shadow-md"
+                className="rounded-full shadow-md md:inline-block md:w-full"
                 src={sakibPic}
                 alt="picture of sakib"
               />
             </div>
-            <div className="w-1/2 flex flex-col items-center">
+            <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText
                 text="Write Code For Fun"
-                className="text-7xl text-left"
+                className="!text-7xl !text-left xl:!text-5xl md:!text-5xl sm:!text-3xl"
               />
 
               <p className="my-4 text-base font-medium">
@@ -40,7 +40,7 @@ export default function Home() {
               </p>
               <div className="flex items-center  self-start mt-2">
                 <Link
-                  href=""
+                  href="https://drive.google.com/file/d/1RD5_Vz0Ub1kdJ97dRiglgKo6fdMtUbsG/view?usp=sharing"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark ease duration-300 dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                 >

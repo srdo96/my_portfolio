@@ -27,7 +27,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75">
           {time} | {address}
         </span>
-        <p className="font-medium w-full">{work}</p>
+        <ul className="font-medium w-full list-disc ml-8 mt-2">{work}</ul>
       </motion.div>
     </li>
   );
@@ -54,9 +54,22 @@ const Experience = () => {
             position="Web Developer (Intern)"
             company="ExCode"
             companyLink="https://excode.net/"
-            time="Feb, 2023 - Present"
+            time="Feb, 2023 - April, 2023"
             address="Barishal, Bangladesh"
-            work="Work on a team responsible for developing new features and bug fixing for their in house LMS projects iKra.my"
+            work={
+              <>
+                <li>Worked on an existing LMS project.</li>
+                <li>
+                  Developed a landing page and features such as Student
+                  attendance, tables etc.
+                </li>
+                <li>
+                  Troubleshot and debugged issues within the project codebase.
+                </li>
+                <li>Created UI test report using google sheets.</li>
+              </>
+            }
+            // work="Work on a team responsible for developing new features and bug fixing for their in house LMS projects iKra.my"
           />
           <div></div>
           {/* <Details
